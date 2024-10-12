@@ -1,0 +1,4 @@
+{
+  "exec": "node --test --test-only",
+  "ext": "js,txt"
+}

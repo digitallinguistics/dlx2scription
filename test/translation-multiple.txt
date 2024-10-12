@@ -1,0 +1,3 @@
+\txn    Jambo
+\tln-en Hello
+\tln-fr Bonjour
