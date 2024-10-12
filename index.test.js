@@ -23,7 +23,7 @@ describe(`dlx2scription`, function() {
 
   })
 
-  describe.only(`lines`, function() {
+  describe(`lines`, function() {
 
     test(`metadata`, createDefaultTest(`metadata`))
 
