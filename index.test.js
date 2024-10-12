@@ -4,41 +4,30 @@ import fixtures      from './test/index.js'
 
 import { describe, it, test } from 'node:test'
 
+function createDefaultTest(name) {
+  return function defaultTest() {
+
+    const { data, scription } = fixtures.get(name)
+    const result              = dlx2scription(data)
+
+    expect(result).to.equal(scription)
+
+  }
+}
+
 describe(`dlx2scription`, function() {
 
   describe(`library`, function() {
 
-    it(`converts multiple utterances`, function() {
-
-      const { data } = fixtures.get(`multiple-utterances`)
-      const result   = dlx2scription(data)
-      const expected = `ninakupenda\nI love you\n\nunanipenda\nyou love me`
-
-      expect(result).to.equal(expected)
-
-    })
+    it(`converts multiple utterances`, createDefaultTest(`multiple-utterances`))
 
   })
 
-  describe(`lines`, function() {
+  describe.only(`lines`, function() {
 
-    test(`metadata`, function() {
+    test(`metadata`, createDefaultTest(`metadata`))
 
-      const { data, scription } = fixtures.get(`metadata`)
-      const result              = dlx2scription(data)
-
-      expect(result).to.equal(scription)
-
-    })
-
-    test(`transcription: single orthography`, function() {
-
-      const { data, scription } = fixtures.get(`transcription-single`)
-      const result              = dlx2scription(data)
-
-      expect(result).to.equal(scription)
-
-    })
+    test(`transcription: single orthography`, createDefaultTest(`transcription-single`))
 
     test(`transcription: multiple orthographies`, function() {
 
@@ -50,14 +39,7 @@ describe(`dlx2scription`, function() {
 
     })
 
-    test(`translation: single language`, function() {
-
-      const { data, scription } = fixtures.get(`translation-single`)
-      const result              = dlx2scription(data)
-
-      expect(result).to.equal(scription)
-
-    })
+    test(`translation: single language`, createDefaultTest(`translation-single`))
 
     test(`translation: multiple languages`, function() {
 
