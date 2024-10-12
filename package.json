@@ -18,6 +18,7 @@
     "url": "https://github.com/dwhieb"
   },
   "main": "index.js",
+  "type": "module",
   "scripts": {},
   "publishConfig": {
     "access": "public"
