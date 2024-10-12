@@ -19,7 +19,7 @@ describe(`dlx2scription`, function() {
 
   describe(`library`, function() {
 
-    it.only(`converts multiple utterances`, createDefaultTest(`multiple-utterances`))
+    it(`converts multiple utterances`, createDefaultTest(`multiple-utterances`))
 
   })
 
