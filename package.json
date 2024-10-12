@@ -1,0 +1,25 @@
+{
+  "name": "@digitallinguistics/dlx2scription",
+  "description": "A JavaScript library for converting linguistic data to interlinear text format",
+  "version": "0.1.0",
+  "keywords": [
+    "linguistics",
+    "interlinear gloss",
+    "language",
+    "morphology",
+    "digital linguistics",
+    "digital humanities"
+  ],
+  "homepage": "https://github.com/digitallinguistics/dlx2scription",
+  "bugs": "https://github.com/digitallinguistics/dlx2scription/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "https://github.com/dwhieb"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
