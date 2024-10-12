@@ -8,7 +8,15 @@ describe(`dlx2scription`, function() {
 
   describe(`library`, function() {
 
-    it(`converts multiple utterances`)
+    it(`converts multiple utterances`, function() {
+
+      const { data } = fixtures.get(`multiple-utterances`)
+      const result   = dlx2scription(data)
+      const expected = `ninakupenda\nI love you\n\nunanipenda\nyou love me`
+
+      expect(result).to.equal(expected)
+
+    })
 
   })
 
