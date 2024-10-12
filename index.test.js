@@ -1,19 +1,9 @@
-import dlx2scription from './index.js'
-import { expect }    from 'chai'
-import fixtures      from './test/index.js'
+import createDefaultTest from './test/createDefaultTest.js'
+import dlx2scription     from './index.js'
+import { expect }        from 'chai'
+import fixtures          from './test/index.js'
 
 import { describe, it, test } from 'node:test'
-
-function createDefaultTest(name) {
-  return function defaultTest() {
-
-    const { data, scription } = fixtures.get(name)
-    const result              = dlx2scription(data)
-
-    expect(result).to.equal(scription)
-
-  }
-}
 
 describe(`dlx2scription`, function() {
 
